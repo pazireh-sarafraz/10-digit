@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse</title>
+</head>
+<body>
+    <script>
+        var x = Number(prompt("enter a digit"));
+        var arr = [];
+        var i = 0;
+        
+        // arr: yekan, dahgan, sadgan, ...
+        while((x/10) != 0){
+            arr[i] = x%10;
+            i++;
+            x = Math.floor(x/10);
+        }
+        
+        var reverse = 0;
+        for(var i=0; i<arr.length; i++){
+            reverse += arr[i]*Math.pow(10, arr.length-1-i);
+        }
+        
+        console.log(reverse);
+    </script>
+</body>
+</html>
